@@ -1,0 +1,717 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <style>
+      html, body {
+    margin: 0;
+    height: 100%;
+}
+
+    .content h1{
+    color:#f9a826;}
+
+.box_promo{
+background:#f2f2f2;
+  width: 100vw;
+  }
+
+ .bcg{
+ padding:20px;
+ margin-bottom:0;}
+
+  .box_promo_inner{
+background:#fff;
+  padding:10px;
+  font-size:12px;
+    word-wrap: break-word;
+    margin:20px;
+  }
+
+  .content{
+  width:80%;
+  max-width:600px;
+  background: rgba(255,181,0,0.15);
+  margin:30px auto;
+  min-height:300px;
+  }
+
+  .bg-1{
+  background: rgba(255,181,0,0.15);
+  }
+  .p20{
+  padding:20px;}
+
+  #login-pop-up{
+    min-height:300px;
+  }
+
+  .pop-up{
+  display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  color:#fff;
+  z-index:999;
+  background-color:rgba(0,0,0,.4);
+  }
+
+#inner{
+display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+width:100%;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  color:#fff;
+  height:100%;
+}
+
+#remove{
+max-height:300px;}
+
+#insert_home:hover{
+font-size:17px;
+background:#FFABB0;
+color:#FFF;
+}
+
+#insert_home:hover span {display:none}
+#insert_home:hover:before {content:"PRECISA DE LOGIN"
+}
+
+
+#modal_invoice{
+background:#fff;}
+
+
+*:focus {
+    outline: 0;
+    outline: none;
+}
+.mainselection select {
+text-align:center;
+   border: 0;
+   color:  #684627;
+   background: transparent;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 2px 10px;
+   background: rgba(255,181,0,0.25);;
+   -webkit-appearance: none;
+   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 10px;
+
+}
+
+
+.mainselection p{
+margin-bottom:9px;
+font-size:12px;
+font-weight: 300;
+}
+
+.header_invoice{
+width:100%;}
+
+
+
+.invoice_buttons {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: center;
+    padding: .75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(.3rem - 1px);
+    border-bottom-left-radius: calc(.3rem - 1px);
+}
+
+
+
+
+.button_pay{
+  outline:none;
+padding:20px;
+  text-align: center;
+  border-radius:7px;
+  border: #fff;
+  color:#2f160f;
+margin:0 auto;
+
+  text-shadow:0;
+    font-size:15px;
+    font-weight:300;
+  cursor: pointer;
+  }
+.button_pay:hover {
+BACKGROUND:#B6D6B4;
+  }
+
+
+
+.message_erro{
+background:#f8d7da;
+
+width:100%;
+padding:20px 20px 20px 20px;
+}
+
+.message_erro label{
+font-size:12px;
+margin-top:20px;
+width:100%;
+}
+
+.erro{
+    color: #721c24;}
+.info{
+color: #856404;
+background:#fff3cd;
+}
+
+.sucess{
+color: #155724;
+    background-color: #d4edda;
+
+}
+
+.input-end{
+color: #856404;
+border:none;
+background:none;
+padding:5px;
+border-bottom:2px solid #D1AE45;
+margin:10px;
+font-size:14px;
+width:100%;
+text-transform: uppercase;
+ }
+
+ .input-end::placeholder{
+color: #D1AE45;
+font-size:12px;
+}
+
+
+.input-end:focus{
+color: #000;
+text-transform: uppercase;
+margin-left:3px;
+font-size:12px;
+
+}
+
+
+
+input:-internal-autofill-selected {
+    background-color: #fff3cd; !important;
+    background-image: none !important;
+    color: #856404; !important;
+}
+
+
+.pk{
+margin-left:5px;
+text-transform: uppercase;
+}
+
+.color-0{
+color:#58A36A;}
+
+
+
+
+@media only screen and (max-width: 720px) {
+#remove{
+margin-top:15%;
+margin-bottom:15%;}
+ .pop-up{
+ height:100%;}
+}
+
+</style>
+  {% include 'header.html' %}
+  <body>
+  {% if not session.logged_in %}
+
+      <div class="pop-up" id="pop-up">
+          <div class="ppout content">
+              <div class="modal-content">
+                  <div id="login-pop-up" class="modal-body">
+                      <button type="button" id="close-pop-up" class="close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <div class="row">
+                          <div id="remove" class="col-7 ">
+
+                                  <img src="../static/img/criolina_logo.svg">
+
+                          </div>
+                          <div class="col-5">
+                              <div id="front" style="margin-top:35px;" class="login-form front">
+                                  <form method="POST" name="pop-up/pedidos_promo" action="{{ url_for('login') }}">
+                                      <div class="input-group">
+                                          <!--                              <label class="label-form">LOGIN</label>-->
+                                          <input type="email" class="input-form" name="EMAIL" autocomplete="off"
+                                                 placeholder="LOGIN">
+                                      </div>
+                                      <div class="input-group">
+                                          <!--                              <label class="label-form">SENHA</label>-->
+                                          <input type="password" class="input-form" name="PASSWORD" autocomplete="off"
+                                                 placeholder="SENHA">
+                                          <a href="#" class="register">esqueceu a senha?</a>
+                                      </div>
+                                      <div class="input-group text-center">
+                                          <input type="hidden" name="POP_UP" value="pedidos_promo">
+                                          <input type="submit" class="button_4" value="ACESSAR">
+
+                                      </div>
+                                  </form>
+                                  <div style="margin:0 auto;" class="container-fluid">
+                                      <button type="submit" style="border:0; background:none;" id="btn_front"><p
+                                              style="font-size:11px;">ou registre-se AQUI </p></button>
+                                  </div>
+
+                              </div>
+                              <div id="back" class="login-form back">
+                                  <form class="blend" action="{{ url_for('register') }}" method="POST">
+                                      <div class="input-group rec">
+                                          <input class="input-form" type="text" name="EMAIL" placeholder="EMAIL"
+                                                 autocomplete="off">
+                                      </div>
+                                      <div class="input-group rec">
+                                          <input class="input-form" type="password" name="PASSWORD" placeholder="EMAIL"
+                                                 autocomplete="off">
+                                      </div>
+
+
+                                      <div class="flex">
+                                          <div class="input-group rec">
+                                              <input type="text" class="input-form" name="NOME" autocomplete="off"
+                                                     placeholder="NOME">
+                                          </div>
+                                          <div class="input-group rec">
+                                              <input type="text" class="input-form" name="SOBRENOME" autocomplete="off"
+                                                     placeholder="SOBRENOME">
+                                          </div>
+                                      </div>
+
+
+                                      <div class="input-group text-center">
+
+
+                                          <input type="submit" class="button_4" value="REGISTRAR">
+                                      </div>
+                                  </form>
+                                  <button type="submit" id="btn_back" style="border:0; background:none;"><p
+                                          style="font-size:11px;">já tenho login</p>
+                                  </button>
+
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+{% endif %}
+  <section  id="background" class="background">
+      <div  class="content text-center">
+
+          <div >
+
+              <div class="row">
+                  <div class="col-md-6">
+                       <img width="270" src="../static/img/pack_criolina/pack_criolina1.svg">
+                      <img id="pack" width="270" src="../static/img/icon-2.svg">
+
+                  </div>
+                  <div class="col-md-6">
+                      <div class="container-fluid box_promo_inner">
+                          <p class="bcg">Cerveja e música toda sexta feira feira na sua casa. Descubra o que o nosso pacote reserva
+                              para você:
+                              2 litros de cerveja na sua casa,
+                              por semana, com frete grátis
+
+                              Encontro no zoom com brinde
+                              e música com a gente
+                              Entrada livre em todos os shows de 2020 quando a @cervejariacriolina abrir as portas
+                              Com a aquisição do PACK você ainda colabora com a manutenção da @cervejariacriolina e
+                              ajuda a gente a
+                              manter o nosso time de pé.
+                          </p>
+                          <h1>R$ 250,00</h1>
+                          {% if session.logged_in %}
+                          <button style="font-size:18px;" class="button_3" data-toggle="modal" data-target="#invoice">COMPRAR PACK</button>
+                          {% else %}
+                          <button style="font-size:15px;" id="insert_home" class="button_3"><span>COMPRAR PACK</span></button>
+                          {% endif %}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="invoice" tabindex="-1" role="dialog" aria-labelledby="invoice" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div id="modal_invoice" class="modal-content">
+          <div class="modal-header ">
+              <div class="header_invoice text-center">
+                  <img style="margin-left:30px;" width="100" src="../static/img/criolina_logo.svg">
+              </div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+
+          </div>
+          {% if not session.delivery %}
+          <div id="message" class="message_erro text-center">
+              <div id="erro" class="erro">
+                  <p style="font-size:11px;">SEU ENDEREÇO PARA ENTREGA NÃO ESTÁ CADASTRADO, ATUALIZE SEU CADASTRO NA
+                      ÁREA DE
+                      CLIENTE OU </p>
+                  <button STYLE="font-size:10px;" CLASS="btn btn-danger" id="change">CLIQUE PARA ATUALIZAR</button>
+              </div>
+              <div id="insert-info" style="display:none;" class="insert-info ">
+                  <p style="font-size:11px;">ADICIONE SEU ENDEREÇO PARA ENTREGA </p>
+                  <div class="row ">
+                      <div class="col-2 ">
+                          <label class="text-left">ENDEREÇO:</label>
+                      </div>
+                      <div class="col-8">
+                          <input class="input-end" type="text" id="ENDERECO" name="ENDERECO" placeholder="ENDEREÇO"
+                                 autocomplete="anyrandomstring"
+                                 required>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-2">
+                          <label>NR./APTO:</label>
+                      </div>
+                      <div class="col-8">
+
+                      <input class="input-end" type="text" id="APT" name="APT" placeholder="* APTO / NÚMERO"
+                             autocomplete="anyrandomstring">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-2">
+                          <label>BAIRRO:</label>
+                      </div>
+                      <div class="col-8">
+                      <input class="input-end" type="text" id="BAIRRO" name="BAIRRO" placeholder="BAIRRO (somente na região de Brasília)" autocomplete="anyrandomstring"
+                             required>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-2">
+                          <label class="text-left">CEP:</label>
+                      </div>
+                      <div class="col-8">
+                      <input class="input-end" type="text" name="CEP" id="CEP" placeholder="CEP" autocomplete="anyrandomstring" required>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-2">
+                          <label>TELEFONE:</label>
+                      </div>
+                      <div class="col-8">
+                      <input class="input-end" type="text" name="TELEFONE" id="TELEFONE" placeholder="TELEFONE" autocomplete="anyrandomstring"
+                             required>
+                      </div>
+                  </div>
+                      <button type="button" id="saved" style="color:#fff;font-size:10px;" class="btn btn-warning">SALVAR ALTERAÇÕES</button>
+              </div>
+              <div id="finish" style="display:none; font-size:12px;" class="finish ">
+                  <h5 style="padding-bottom:7px;">Atualizado com Sucesso!</h5>
+                  <div class="row">
+                      <div class="col-2">
+                          <p class="color-0">ENDEREÇO:</p>
+                      </div>
+                      <div class="col-8 text-left">
+                          <p class="pk" id="inner_ENDERECO"></p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-2">
+                          <p class="color-0">Nr./APTO:</p>
+                      </div>
+                      <div class="col-8 text-left">
+                          <p class="pk" id="inner_APT"></p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-2">
+                          <p class="color-0">BAIRRO:</p>
+                      </div>
+                      <div class="col-8 text-left">
+                          <p class="pk" id="inner_BAIRRO"></p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-2">
+                          <p class="color-0">CEP:</p>
+                      </div>
+                      <div class="col-8 text-left">
+                          <p class="pk" id="inner_CEP">CEP</p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-2">
+                          <p class="color-0">TELEFONE:</p>
+                      </div>
+                      <div class="col-8 text-left">
+                          <p class="pk" id="inner_TELEFONE"></p>
+                      </div>
+                  </div>
+                  <div class="container-fluid">
+                      <button type="button" style="font-size:10px;" id="edit" class="btn btn-success">EDITAR INFORMAÇÕES</button>
+                  </div>
+              </div>
+          </div>
+          {% endif %}
+          <div class="modal-body">
+
+              <div class="row">
+                  <div class="col-6 text-center">
+                      <div class="container-fluid bg-1 p20">
+                          <img src="../static/img/garrafa.svg">
+                          <h2>1 Litro</h2>
+                          <div class="mainselection">
+                              <p>Escolha sua cerveja:</p>
+
+                              <select id="select_1" class="custom-select text-center">
+                                  <option value="IPA">IPA</option>
+                                  <option value="LAGER">LAGER</option>
+                                  <option value="PILSEN">PILSEN</option>
+                                  <option value="BLACK">BLACK</option>
+                                  <option value="PALE">PALE ALE</option>
+                                  <option value="TRIGO">TRIGO</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6 text-center">
+                      <div class="container-fluid bg-1 p20">
+                          <img src="../static/img/garrafa.svg">
+                          <h2>1 Litro</h2>
+                          <div class="mainselection">
+                              <p>Escolha sua cerveja:</p>
+                              <select id="select_2" class="custom-select" >
+                                  <option value="IPA">IPA</option>
+                                  <option value="LAGER">LAGER</option>
+                                  <option value="PILSEN">PILSEN</option>
+                                  <option value="BLACK">BLACK</option>
+                                  <option value="PALE">PALE ALE</option>
+                                  <option value="TRIGO">TRIGO</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+      </div>
+      <div class="invoice_buttons">
+           <form method="post" action="{{ url_for('invoice_promo') }}">
+          <input type="hidden" name="ENDERECO" id="form-ENDERECO">
+               <input type="hidden" name="APT" id="form-APT">
+               <input type="hidden" name="BAIRRO" id="form-BAIRRO">
+               <input type="hidden" name="CEP" id="form-CEP">
+               <input type="hidden" name="TELEFONE" id="form-TELEFONE">
+               <input type="hidden" name="PEDIDO_1" id="PEDIDO_1">
+               <input type="hidden" name="PEDIDO_2" id="PEDIDO_2">
+               <input type="hidden" name="ID" value="{{session.ID_User}}">
+               {% if not session.delivery %}
+
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+        <button type="button" id="submit" class="button_pay alert-success">FINALIZAR PEDIDO</button>
+               {% else %}
+                <button type="submit" class="button_pay alert-success">FINALIZAR PEDIDO</button>
+               {% endif %}
+                </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+  <script>
+
+  $(":input").inputmask();
+
+$("#TELEFONE").inputmask({"mask": "(+55) 99999-9999"});
+$("#CEP").inputmask({"mask": "99999-999"});
+
+
+    var btn = document.getElementById('btn_front');
+    var front = document.getElementById('front');
+    var back = document.getElementById('back');
+    var btn2 = document.getElementById('btn_back');
+var pop = document.getElementById('pop-up');
+var close = document.getElementById('close-pop-up');
+var open = document.getElementById('insert_home');
+var edit = document.getElementById('edit');
+
+var change = document.getElementById('change');
+var saved = document.getElementById('saved');
+
+document.getElementById('PEDIDO_1').value = document.getElementById('select_1').value;
+document.getElementById('PEDIDO_2').value = document.getElementById('select_2').value;
+
+
+
+
+
+$( document ).ready(function() {
+
+if (pop){
+document.getElementById('background').style.display = "none";
+}
+if (btn){
+btn.addEventListener( 'click', function() {
+front.classList.remove('not-flipped');
+  back.classList.remove('is-flipped');
+
+  front.classList.toggle('is-flipped');
+  back.classList.toggle('not-flipped');
+
+});
+
+if (close) {
+close.addEventListener( 'click', function() {
+pop.style.visibility = "hidden";
+document.getElementById('background').style.display = "block";
+});
+}
+
+
+if (open) {
+open.addEventListener( 'click', function() {
+pop.style.visibility = "visible";
+document.getElementById('background').style.display = "none";
+});
+
+}
+
+}
+
+if (btn2){
+btn2.addEventListener( 'click', function() {
+front.classList.remove('is-flipped');
+  back.classList.remove('not-flipped');
+
+  front.classList.toggle('not-flipped');
+  back.classList.toggle('is-flipped');
+
+});
+}
+
+if (change){
+change.addEventListener( 'click', function() {
+document.getElementById('message').classList.toggle('info');
+document.getElementById('erro').style.display = "none";
+document.getElementById('insert-info').style.display = "block";
+
+});
+}
+
+if (saved){
+saved.addEventListener( 'click', function() {
+document.getElementById('message').classList.toggle('sucess');
+document.getElementById('insert-info').style.display = "none";
+var list_info = document.querySelectorAll('.insert-info input').forEach(function(el) {
+  var id = el.id;
+  var text = el.value ;
+  document.getElementById('inner_'+id).innerHTML = el.value;
+  document.getElementById('form-'+id).value = el.value;
+});
+document.getElementById('finish').style.display = "block";
+document.getElementById('submit').type = "submit";
+});
+}
+
+if (edit){
+edit.addEventListener( 'click', function() {
+
+
+
+document.getElementById('message').classList.remove('sucess');
+
+document.getElementById('finish').style.display = "none";
+document.getElementById('insert-info').style.display = "block";
+});
+}
+
+
+
+
+});
+
+
+
+$('#select_1').change(function(){
+document.getElementById('PEDIDO_1').value = $('#select_1').val();
+})
+
+$('#select_2').change(function(){
+    document.getElementById('PEDIDO_2').value = $('#select_2').val();
+})
+
+
+
+</script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

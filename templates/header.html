@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+      <link rel="shortcut icon" href="../static/img/favoicon.png" sizes="32x32" type="image/png">
+     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+          <script src="https://kit.fontawesome.com/4dbf725c93.js" crossorigin="anonymous"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <title>Cervejaria Criolina!</title>
+  </head>
+ <body>
+
+<style>
+
+
+
+
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+
+
+
+header{
+background-color:#ffc100;
+overflow:hidden;
+}
+
+
+
+nav{
+min-height:90px;
+margin-bottom:0; !important!;
+}
+    .navbar-nav{
+    margin:0 auto;
+}
+
+.navbar-brand{
+color:#2f160f;
+font-family: 'Kaushan Script', cursive;
+font-size:27px;
+margin:0 auto;}
+
+#navbarNavDropdown{
+width:100%:
+}
+.nav-item{
+
+}
+
+.nav-item a{
+color:#000;
+padding:10px;
+}
+.nav-item a:hover{
+}
+
+.dropdown{
+position:absolute;
+right:10px;}
+
+.dropdown-menu{
+margin-left:-100px;
+ position:absolute;
+right:0;
+font-size:13px;
+background:rgba(255,255,255,0.95);
+color:#2f160f;
+}
+
+
+button:focus {outline:0;}
+
+.nav-link{
+font-weight:300;
+font-size:12px;
+color:#2f160f;
+}
+
+.dropdown-item:hover{
+background-color:#ffc100;
+}
+
+.box_social_itens{
+background:  rgba(30, 18, 10, 0.99);
+width:50px;
+height:150px;
+position:fixed;
+z-index:99999999999;
+right:0;
+border-top-left-radius:20px;
+border-bottom-left-radius:20px;
+paddind-top:3px;
+  top: 70%;
+
+
+}
+
+
+
+
+.social{
+margin-top:5px;
+}
+.icon-item{
+padding-bottom:10px;;
+margin:7px;
+width:50px;
+}
+
+
+
+.icon-item img{
+margin:7px;
+filter: invert(1);
+opacity:.6;
+}
+
+.icon-item img:hover{
+margin:7px;
+filter: invert(1);
+opacity:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.center{
+margin:0 auto;}
+
+.link-nav{
+color:#fff;
+padding:20px;
+text-decoration:none;}
+.link-nav:hover{
+
+color:#2f160f;
+text-decoration:none;}
+
+
+.button_view:hover{
+border: 2px solid #ffc100;
+background:#ffc100;
+}
+
+
+
+
+
+
+.51mx{
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+     text-align: center;
+    vertical-align: middle;
+
+}
+
+.uiGrip{
+height: 64px;
+    overflow: hidden;
+    padding: 12px 0;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+}
+
+
+.data{
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.data_box{
+background: none;
+    padding: 12px 0 10px 0;
+    width: 64px;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.data_box_inner{
+background: none;
+    padding: 12px 12px 10px 12px;
+    width: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    border:2px solid #f2f2f2;
+    margin:10px;
+}
+.mes{
+color: #fa3e3e;
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+.dia{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 2px 0 0 0;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    color:#000;
+}
+
+
+.dia_edit{
+  font-weight: 300;
+    font-size: 15px;
+    line-height: 28px;
+    margin: 2px 0 0 0;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    color:#000;}
+
+
+.title_agenda{
+background: none;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 310px;
+     font-size: 12px;
+}
+td, td.label {
+    text-align: left;
+}
+
+.text{
+margin:0 auto;
+width: 370px;
+}
+
+
+
+
+.top_text{
+color: #1d2129;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+    .details{
+
+    color: #888888;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: normal;
+    }
+
+    .flask{
+    padding: 0 20px 20px 20px;
+    color: #90949c;
+    font-size: 12px;
+    font-weight: normal;
+
+    }
+
+
+
+\
+
+
+
+#button {
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 180px;
+  border-radius:40px;
+  background: rgba(255,181,0,0.15);
+  border: none;
+  color:rgba(255,181,0,1);
+  letter-spacing:1px;
+  text-shadow:0;
+    font-size:11px;
+    font-weight:500;
+  cursor: pointer;
+  transition: all 0.4s ease;}
+#button:hover {
+    color:white;
+    background: rgba(255,181,0,0.55);
+  }
+
+#promocao{
+  background: #f4f2ed;
+  padding:80px;
+margin-bottom:30px;
+}
+
+
+#button_2 {
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 180px;
+  border-radius:40px;
+  background: rgba(255,181,0,0.15);
+  border: none;
+  color:rgba(255,181,0,1);
+  letter-spacing:1px;
+  text-shadow:0;
+    font-size:11px;
+    font-weight:500;
+  cursor: pointer;
+  transition: all 0.4s ease;}
+#button_2:hover {
+    color:white;
+    background: rgba(255,181,0,0.55);
+  }
+
+  .button_3 {
+
+  margin-bottom:30px;
+  outline:none;
+  height: auto;
+  text-align: center;
+  width: 180px;
+  border-radius:40px;
+  padding:10px;
+  background: rgba(255,181,0,0.15);
+  border: none;
+  color:rgba(255,181,0,1);
+  letter-spacing:1px;
+  text-shadow:0;
+    font-size:11px;
+    font-weight:500;
+  cursor: pointer;
+  transition: all 0.4s ease;}
+.button_3:hover {
+    color:white;
+    background: rgba(255,181,0,0.55);
+  }
+
+.button_3 a{
+
+color:rgba(255,181,0,1);
+}
+.button_3 a:hover{
+text-decoration:none;
+color:rgba(255,181,0,1);
+}
+ .button_4 {
+  outline:none;
+  height: 50px;
+  text-align: center;
+  width: 180px;
+  border-radius:7px;
+  background: #FF8E0D;
+  border: #fff;;
+  color:#2f160f;
+margin:0 auto;
+  letter-spacing:1px;
+  text-shadow:0;
+    font-size:11px;
+    font-weight:500;
+  cursor: pointer;
+  }
+.button_4:hover {
+    color:rgba(255,181,0,1);
+    background:#2f160f ;
+  }
+
+
+
+
+
+
+
+  .button_5 {
+  outline:none;
+position:absolute;
+  text-align: center;
+  width: 100%;
+  background:none;
+  border: none;
+  color:#2f160f;
+margin:-3px auto;
+  letter-spacing:1px;
+  text-shadow:0;
+    font-size:10px;
+    font-weight:500;
+  cursor: pointer;
+}
+.button_5:hover {
+border-bottom:1px solid #2f160f;
+    color:#2f160f ;
+  }
+
+.promo{
+width:80%;
+margin:0 auto;}
+
+
+
+
+.box-item{
+background:none;
+padding:2px;
+text-align:center;}
+
+#instagram img{
+width:100%;}
+
+
+#comunidade{
+margin:30px 0 30px 0;
+}
+
+
+#comunidade h1{
+font-family: 'Girassol', cursive;
+padding:20px;
+}
+.cm{
+
+width:100%;
+background: rgba(255,181,0,0.15);
+height:auto;
+}
+
+.b-cm{
+width:100%;
+display:block;
+background: rgba(255,181,0,0.05);
+border-radius:15px;
+height:auto;
+padding:20px;}
+
+
+
+.b-cm a {
+color:#2f160f}
+.b-cm p {
+
+word-wrap: break-word;
+font-size:15px;
+font-weight:300;
+color: rgba(0,0,0,0.55);
+}
+
+.b-cm p i{
+color: rgba(255,181,0,0.65);
+font-size:15px;
+}
+.cicle_box{
+margin:0 auto;
+border-radius:50%;
+width:82px;
+overflow:hidden;
+}
+
+.b-cm h6{
+padding:5px;}
+
+.b-cm img {
+height: 80px;
+    }
+.name-user{
+margin-left:-50px;}
+
+
+.modal-content{
+background: #ffc100;
+color:#2f160f;
+width:auto;
+}
+
+.modal-body img{
+width:100%;
+}
+
+.modal-header{
+border-bottom:0;}
+
+.login-form{
+position: absolute;
+padding-top:28px;
+justify-content: center;
+  align-items: center;
+  margin-left:-30px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+width:100%;
+
+}
+
+.label-form{
+font-family: 'Girassol', cursive;
+ letter-spacing:1px;
+ margin:0;
+}
+
+
+
+
+.rec{
+border-radius: 0;
+margin-right:3px;
+}
+.input-form{
+background:#E89B0C;
+font-size:12px;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+
+}
+
+.input-form::placeholder{
+font-family: 'Girassol', cursive;
+ letter-spacing:1px;
+ color:#2f160f;
+}
+
+
+.input-form:focus{
+outline: none;
+  box-shadow: 1px 1px 7px rgba(0,0,0,.3);
+  background: E6AC00;}
+
+
+.input-group{
+padding-bottom:10px;}
+
+.register{
+font-size:11px;
+color:#2f160f;
+margin:0 auto;
+}
+
+.register a{
+font-size:11px;
+color:#2f160f;
+
+}
+
+.blend{
+transition: transform 1s;
+  transform-style: preserve-3d;
+  }
+
+
+  .is-flipped {
+  opacity:0;
+
+}
+
+.coluna1 img{
+width:350px;
+
+}
+
+.back{
+opacity:0;
+margin-left:-200px;
+margin-top:-10px;
+}
+
+.not-flipped{
+opacity:1;
+}
+.back.not-flipped{
+opacity:1;
+  margin-left:-30px;
+}
+
+.close{
+color:#2f160f;
+font-size:30px;
+}
+
+.box_hidden{
+width:100%;
+height:300px;
+overflow:hidden;
+display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.box_hidden img{
+width:100%;
+margin:0 auto;
+}
+
+.roll{
+padding:10px 20px 5px 20px;
+ height:200px;
+    overflow:auto;}
+
+    .extras{
+    margin-top:30px;}
+
+@media only screen and (max-width: 720px) {
+
+  .box-item img{
+  margin-left:-70px;}
+
+  .b-cm{
+  margin-top:20px;}
+  #img_background{
+  height: 650px;
+  }
+  .box_business {
+  height: 650px;}
+
+
+}
+
+
+
+</style>
+ <header>
+     <nav class="navbar navbar-expand-lg">
+         <div class="container">
+             <a class="navbar-brand" href="/"><img height="90" src="../static/img/criolina_logo.svg">
+             </a>
+<!--                     <div class="nav-item dropdown">-->
+<!--                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"-->
+<!--                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                             Minha Conta-->
+<!--                         </a>-->
+<!--                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+<!--                             <a class="dropdown-item" href="#">Fazer Login</a>-->
+<!--                             <a class="dropdown-item" href="#">Registrar Usuário</a>-->
+<!--                         </div>-->
+<!--                     </div>-->
+         </div>
+     </nav>
+
+     <div class="box_social_itens">
+         <div class="social">
+          <a  class="icon-item" href="https://www.instagram.com/cervejariacriolina"><img width="23" src="../static/img/instagram.svg"></a>
+                    <a class="icon-item" href="https://www.facebook.com/cervejariacriolina/"><img width="23" src="../static/img/facebook.svg"></a>
+                    <a class="icon-item" href="https://twitter.com/hashtag/cervejariacriolina?src=hash"><img width="23" src="../static/img/twitter.svg"></a>
+             </div>
+     </div>
+
+
+
+
+
+ </header>
+
+

@@ -1,0 +1,1092 @@
+{% include 'header.html' %}
+<style>
+
+
+
+
+
+    #img_background{
+  background: url('./static/img/foto3.jpg') no-repeat center center;
+  height: 600px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:-99999;
+
+
+}
+.box_business {
+background:  rgba(0, 0, 0, 0.45);
+position: absolute;
+text-align: center;
+height: 600px;
+left: 0;
+right: 0;
+z-index:0;
+
+}
+
+.mig{
+width:100%;
+height:550px;
+position: relative;
+margin:0 auto;
+padding:20px;
+}
+
+
+.subtext{
+padding:0 38px 0 38px;
+color:#fff;
+position:relative;
+margin-top:-40px;
+font-weight:300;
+font-size:15px;
+margin-bottom:20px;
+}
+
+.box_text{
+justify-content: center;
+  align-items: center;
+font-size:14px;
+font-family: 'Oswald', sans-serif;
+line-height: 1.6;
+letter-spacing: 0.1em;
+}
+
+
+.login-area{
+width:450px;
+height:auto;
+background:  rgba(10, 8, 2, 0.8);
+border-radius:10px;
+border-bottom:2px solid #ffc100;
+margin:0 auto;
+  padding-bottom:20px;
+
+}
+
+.login-area img{
+position:relative;
+}
+
+
+
+
+.sub-a{
+font-size:11px;
+font-weight:400;
+margin:0;
+color:#FFD24D;}
+
+
+  .button_view{
+display:block;
+  background:none;
+margin:20px auto;
+  border:2px solid #fff;
+  padding:10px;
+  color:#fff;
+  }
+
+
+.center{
+margin:0 auto;}
+
+.link-nav{
+color:#fff;
+padding:20px;
+text-decoration:none;}
+.link-nav:hover{
+
+color:#2f160f;
+text-decoration:none;}
+
+
+.button_view:hover{
+border: 2px solid #ffc100;
+background:#ffc100;
+}
+
+.agenda{
+display:block;
+height:auto;
+min-height:600px;
+margin: 0 auto;}
+
+
+
+
+.agenda h1{
+font-family: 'Girassol', cursive;
+padding:50px;
+text-shadow: 4px 4px 2px rgba(255, 181, 0, 0.88);
+font-size:70px;
+}
+
+.nav-pills{
+heigth:400px;
+overflow:auto;
+}
+
+
+.51mx{
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+     text-align: center;
+    vertical-align: middle;
+
+}
+
+.uiGrip{
+height: 64px;
+    overflow: hidden;
+    padding: 12px 0;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+}
+
+
+.data{
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.data_box{
+background: none;
+    padding: 12px 0 10px 0;
+    width: 64px;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.data_box_inner{
+background: none;
+    padding: 12px 12px 10px 12px;
+    width: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    border:2px solid #f2f2f2;
+    margin:10px;
+}
+.mes{
+color: #fa3e3e;
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+.dia{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 2px 0 0 0;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    color:#000;
+}
+
+
+.dia_edit{
+  font-weight: 300;
+    font-size: 15px;
+    line-height: 28px;
+    margin: 2px 0 0 0;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    color:#000;}
+
+
+.title_agenda{
+background: none;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 310px;
+     font-size: 12px;
+}
+td, td.label {
+    text-align: left;
+}
+
+.text{
+margin:0 auto;
+width: 370px;
+}
+
+
+
+
+.top_text{
+color: #1d2129;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+    .details{
+
+    color: #888888;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: normal;
+    }
+
+    .flask{
+    padding: 0 20px 20px 20px;
+    color: #90949c;
+    font-size: 12px;
+    font-weight: normal;
+
+    }
+
+
+.nav-link{
+margin:0 auto;
+width:100%;}
+
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: rgba(255,181,0,0.15);
+    width:100%;
+}
+
+
+
+#button {
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 180px;
+  border-radius:40px;
+  background: rgba(255,181,0,0.15);
+  border: none;
+  color:rgba(255,181,0,1);
+  letter-spacing:1px;
+  text-shadow:0;
+    font-size:11px;
+    font-weight:500;
+  cursor: pointer;
+  transition: all 0.4s ease;}
+#button:hover {
+    color:white;
+    background: rgba(255,181,0,0.55);
+  }
+
+#promocao{
+  background: #f4f2ed;
+  padding:80px;
+margin-bottom:30px;
+}
+
+
+#button_2 {
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 180px;
+  border-radius:40px;
+  background: rgba(255,181,0,0.15);
+  border: none;
+  color:rgba(255,181,0,1);
+  letter-spacing:1px;
+  text-shadow:0;
+    font-size:11px;
+    font-weight:500;
+  cursor: pointer;
+  transition: all 0.4s ease;}
+#button_2:hover {
+    color:white;
+    background: rgba(255,181,0,0.55);
+  }
+
+
+
+  #acess,#acess2{
+  margin-bottom:0;
+  font-size:17px;
+   width: 220px;
+  }
+
+  .button_3 {
+  margin-bottom:30px;
+  outline:none;
+  height: auto;
+  text-align: center;
+  width: 180px;
+  border-radius:40px;
+  padding:10px;
+  background: rgba(255,181,0,0.15);
+  border: none;
+  color:rgba(255,181,0,1);
+  letter-spacing:1px;
+  text-shadow:0;
+    font-size:11px;
+    font-weight:500;
+  cursor: pointer;
+  transition: all 0.4s ease;}
+.button_3:hover {
+    color:white;
+    background: rgba(255,181,0,0.55);
+  }
+
+.button_3 a{
+
+color:rgba(255,181,0,1);
+}
+.button_3 a:hover{
+text-decoration:none;
+color:rgba(255,181,0,1);
+}
+ .button_4 {
+  outline:none;
+  height: 50px;
+  text-align: center;
+  width: 180px;
+  border-radius:7px;
+  background: #FF8E0D;
+  border: #fff;;
+  color:#2f160f;
+margin:0 auto;
+  letter-spacing:1px;
+  text-shadow:0;
+    font-size:11px;
+    font-weight:500;
+  cursor: pointer;
+  transition: all 0.4s ease;}
+.button_4:hover {
+    color:rgba(255,181,0,1);
+    background:#2f160f ;
+  }
+
+
+
+
+  .sair{
+  display:block;
+  position:relative;
+  font-size:9px;
+  margin:30px auto;
+    font-weight:500;
+    color:rgba(255,181,0,1);
+   -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+
+  }
+   .sair:hover{
+   font-size:12px;
+   color:#FF0D37;
+   text-decoration:none;
+   -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+   }
+
+.cr{
+height:30px;
+display:block;
+margin-top:-10px;
+margin-bottom:10px;
+}
+
+
+  .button_5 {
+  outline:none;
+position:absolute;
+  text-align: center;
+  width: 100%;
+  background:none;
+  border: none;
+  color:#2f160f;
+margin:-3px auto;
+  letter-spacing:1px;
+  text-shadow:0;
+    font-size:10px;
+    font-weight:500;
+  cursor: pointer;
+}
+.button_5:hover {
+border-bottom:1px solid #2f160f;
+    color:#2f160f ;
+  }
+
+.promo{
+width:80%;
+margin:0 auto;}
+
+
+
+
+.box-item{
+background:none;
+padding:2px;
+text-align:center;}
+
+.nto img{
+width:100%;}
+
+
+#comunidade{
+margin:30px 0 30px 0;
+}
+
+
+#comunidade h1{
+font-family: 'Girassol', cursive;
+padding:20px;
+}
+
+#instagram h1{
+font-family: 'Girassol', cursive;
+padding:50px;
+text-shadow: 4px 4px 2px rgba(255, 181, 0, 0.88);
+font-size:50px;
+}
+
+
+.cm{
+
+width:100%;
+background: rgba(255,181,0,0.15);
+height:auto;
+}
+
+.b-cm{
+width:100%;
+display:block;
+background: rgba(255,181,0,0.05);
+border-radius:15px;
+height:auto;
+padding:20px;}
+
+
+
+.b-cm a {
+color:#2f160f}
+.b-cm p {
+
+word-wrap: break-word;
+font-size:15px;
+font-weight:300;
+color: rgba(0,0,0,0.55);
+}
+
+.b-cm p i{
+color: rgba(255,181,0,0.65);
+font-size:15px;
+}
+.cicle_box{
+margin:0 auto;
+border-radius:50%;
+width:82px;
+overflow:hidden;
+}
+
+.b-cm h6{
+padding:5px;}
+
+.b-cm img {
+height: 80px;
+    }
+.name-user{
+margin-left:-50px;}
+
+
+.modal-content{
+background: #ffc100;
+color:#2f160f;
+width:auto;
+}
+
+.modal-body img{
+width:100%;
+}
+
+.modal-header{
+border-bottom:0;}
+
+.login-form{
+position: absolute;
+padding-top:28px;
+justify-content: center;
+  align-items: center;
+  margin-left:-30px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+width:100%;
+
+}
+
+.label-form{
+font-family: 'Girassol', cursive;
+ letter-spacing:1px;
+ margin:0;
+}
+
+
+
+
+.rec{
+border-radius: 0;
+margin-right:3px;
+}
+.input-form{
+background:#E89B0C;
+font-size:12px;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-form::placeholder{
+font-family: 'Girassol', cursive;
+ letter-spacing:1px;
+ color:#2f160f;
+}
+
+
+.input-form:focus{
+outline: none;
+  box-shadow: 1px 1px 7px rgba(0,0,0,.3);
+  background: E6AC00;}
+
+
+.input-group{
+padding-bottom:10px;}
+
+.register{
+font-size:11px;
+color:#2f160f;
+margin:0 auto;
+}
+
+.register a{
+font-size:11px;
+color:#2f160f;
+
+}
+
+.blend{
+transition: transform 1s;
+  transform-style: preserve-3d;
+  }
+
+
+  .is-flipped {
+  opacity:0;
+
+}
+
+
+.coluna1{
+width:100%;
+min-width:450px;
+}
+
+
+
+
+
+
+.back{
+opacity:0;
+margin-left:-200px;
+margin-top:-10px;
+}
+
+.not-flipped{
+opacity:1;
+}
+.back.not-flipped{
+opacity:1;
+  margin-left:-30px;
+}
+
+.close{
+color:#2f160f;
+font-size:30px;
+}
+
+.box_hidden{
+width:100%;
+height:300px;
+overflow:hidden;
+display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.box_hidden img{
+width:100%;
+height:100%;
+margin:0 auto;
+}
+
+.roll{
+padding:10px 20px 5px 20px;
+ height:300px;
+    overflow:auto;}
+
+
+
+    .extras{
+    margin-top:30px;}
+
+
+    .bongo{
+    margin-top:-75px;}
+
+.pane{
+display:flex;
+}
+@media only screen and (max-width: 960px) {
+
+  .box-item img{
+  margin-left:-70px;}
+
+  .b-cm{
+  margin-top:20px;}
+  #img_background{
+  height: 650px;
+  }
+  .box_business {
+  height: 650px;}
+
+.pane{
+display:block;
+}
+
+
+
+}
+
+
+
+</style>
+<div class="principal">
+    <div id="main">
+        <div id="img_background">
+            <div class="box_business"></div>
+            <div class="mig text-center">
+                <div class="login-area text-center">
+                    <img width="250" style="padding:30px;" src="./static/img/criolina_logo_inverse.svg">
+                    <!-- Button trigger modal -->
+                    <p class="subtext">Galpão da Cervejaria Criolina fica no Setor de Oficinas Sul de
+                        Brasília e
+                        funciona com
+                        diversos eventos diurnos
+                        e noturnos. Despojado, versátil e com arquitetura que é tendência mundial, esse
+                        novíssimo
+                        espaço que une
+                        atrações
+                        artísticas, cervejas artesanais e gastronomia, é um dos espaços preferidos para
+                        quem
+                        curte
+                        cultura e
+                        arte.
+                        <!--                                    <button class="button_view">-->
+                        <!--                                        <a class="link-nav" href="#">SAIBA MAIS +</a>-->
+                        <!--                                    </button>-->
+                    </p>
+
+                    {% if session.logged_in%}
+
+                    <button type="button" id="acess" class="button_3" href="/dashboard">
+                        <a href="/dashboard">
+                            <p class="sub-a">Olá, {{session.Completo}} !</p>
+                            ACESSAR CONTA</a>
+                    </button>
+                    {% else %}
+                    <button type="button" id="acess2" class="button_3" data-toggle="modal"
+                            data-target="#staticBackdrop">
+                        FAZER LOGIN
+                    </button>
+                    {% endif %}
+
+                    {% if session.logged_in %}
+                    <form method="POST" action="{{ url_for('logout') }}">
+                        <div class="cr container-fluid">
+                            <button class="sair" style="border:none;background:none;" type="submit">
+                                LOGOUT
+                            </button>
+                        </div>
+                    </form>
+                    {% endif %}
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <div id="promocao" class="container-fluid">
+        <div class="promo">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="bg_promo">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./static/img/pack_criolina/promo1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./static/img/pack_criolina/promo2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <img src="./static/img/pack_criolina/base_promo.jpg" class="d-block w-100" alt="...">
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                               data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                               data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="container-fluid box-item text-center">
+                        <img src="./static/img/pack_criolina/pack_criolina1.svg">
+                        <img src="./static/img/pack_criolina/pack_text.jpg" class="d-block w-100" alt="...">
+                        <a href="/pedidos_promo"><button id="button_2">
+                            FAZER PEDIDO
+                        </button>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       <div id="agenda" class="container-fluid">
+        <div class="agenda text-center">
+            <h1>AGENDA CULTURAL</h1>
+            <div class="container-fluid">
+                <div class="pane">
+                        <div class="coluna1 text-center">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                 aria-orientation="vertical">
+                                {%for x in festas%}
+                                <a class="nav-link flex {% if loop.index == 1 %}active{% endif %}"
+                                   id="v-pills-{{x.0}}-tab"
+                                   data-toggle="pill" href="#v-pills-{{x.0}}" role="tab"
+                                   aria-controls="v-pills-home" aria-selected="true">
+                                    <div class="agenda_item">
+                                        <table class="uiGrip" cols="4" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                            <tr class="51mx">
+                                                <td class="data">
+                                              <span class="data_box">
+                                                <span class="mes">{{x.3}}</span>
+                                                <span class="dia">{{x.2}}</span>
+                                              </span>
+                                                </td>
+                                                <td class="title_agenda">
+                                                    <div class="text">
+                                                        <div class="top_text">
+                                                            <a style="color:#000;" href="#">
+                                                                {{x.1}}</a>
+                                                        </div>
+                                                        <div class="details">
+                                                            <span>{{x.4}}</span>
+                                                        </div>
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </a>
+                                {% endfor %}
+                            </div>
+                            <img src="../static/img/criolina_logo.svg">
+                        </div>
+                        <div class="coluna2 ">
+                            <div class="tab-content" id="v-pills-tabContent">
+                            {%for x in festas%}
+                            <div class="tab-pane fade show {% if loop.index == 1 %}active{% endif %}"
+                                 id="v-pills-{{x.0}}" role="tabpanel"
+                                 aria-labelledby="v-pills-home-tab">
+
+                                <div class="flask">
+                                    <!--                  <img src="https://scontent.fopo1-1.fna.fbcdn.net/v/t1.0-0/p180x540/90065877_923532288084693_5114361805270941696_o.jpg?_nc_cat=106&_nc_sid=b386c4&_nc_oc=AQksvDdo8rYEb0mpKQ3ASdkB0YVLHby5a6IU4_qOU3ZqnriD2DYhOdKK6VMF1Y38MikBKTJ2r_AKiOi2XmZb9H6l&_nc_ht=scontent.fopo1-1.fna&_nc_tp=6&oh=a06d73990b53d413439f2acba4032f28&oe=5EB7FFE0">-->
+                                    <div class="box_hidden">
+                                        <img src="{{x.9}}">
+                                    </div>
+                                    <div class="roll">
+                                        <h5 CLASS="text-center">
+                                            {{x.1}}
+                                        </h5>
+                                        <p>
+                                            {{x.5}}
+                                        </p>
+                                    </div>
+                                    <hr>
+
+                                    <div class="extras flex">
+                                        <div>
+                                            <span class="data_box_inner">
+                                                <span class="mes">{{x.3}}</span>
+                                                <span class="dia_edit">{{x.2}}</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="data_box_inner">
+                                                <span class="mes">HORÁRIO</span>
+                                                <span class="dia_edit">{{x.4}}</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="data_box_inner">
+                                                <span class="mes">VALOR</span>
+                                                <span class="dia_edit">{{x.6}}</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <button id="button">
+                                                COMPRAR INGRESSO
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="instagram" class="container-fluid">
+        <h1 class="text-center">
+            SIGA NOSSO INSTAGRAM
+        </h1>
+
+        <div class="row">
+            {% for a in links %}
+            <div class="nto col-4">
+                <img src="{{a.1}}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="comunidade" class="container-fluid text-center">
+
+        <h1 class="flex">
+            <img width="100" src="./static/img/logo_inverse.svg">
+            COMUNIDADE CRIOLINA
+            <img width="100" src="./static/img/logo_inverse.svg"></h1>
+
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="b-cm">
+                    <div class="container">
+                        <div class="cicle_box">
+                            <img class="app_thumb"
+                                 src="https://scontent.fopo1-1.fna.fbcdn.net/v/t1.0-1/p200x200/45776584_10212681392096520_9094613126388645888_n.jpg?_nc_cat=108&_nc_sid=dbb9e7&_nc_oc=AQnJ1m-JVIDGQeuJYAeT0gTQpXxJlBG8XpRt7g05hAAewhhygliraPTzOuO7rDUPeBN6UOmPB6IFCipWpAQusIOL&_nc_ht=scontent.fopo1-1.fna&_nc_tp=6&oh=a5132cc9a1c04eb62cc692e65064e190&oe=5EBE6FAB"
+                                 alt="Card image cap">
+                        </div>
+                        <a href="#"><h6>Pedro Paiva</h6></a>
+                        <p>
+                            <i class="fas fa-quote-left"></i>
+                            As melhores cervejas do DF! O ambiente é amplo e agradável, vários eventos musicais e
+                            artísticos! Sinta-se em casa....
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="b-cm">
+                    <div class="container">
+                        <div class="cicle_box">
+                            <img class="app_thumb"
+                                 src="https://scontent.fopo1-1.fna.fbcdn.net/v/t1.0-1/p200x200/11227861_1120045554695932_5867974169005690402_n.jpg?_nc_cat=110&_nc_sid=dbb9e7&_nc_oc=AQnUOi_3Kd-Bg3kNOhMbwD0vuBJCHn1it9IHxbzLkazCNdYl5_bvDsX7KLcucW2z86iyup_le-I_h9atf8e-dFw-&_nc_ht=scontent.fopo1-1.fna&_nc_tp=6&oh=3e07b4406dfaa636869e3057b3d76e31&oe=5EBD6A5A"
+                                 alt="Card image cap">
+                        </div>
+                        <a href="#">
+                            <h6>Andre Vilaron</h6>
+                        </a>
+                        <p>
+                            <i class="fas fa-quote-left"></i>
+                            Muito chique a Cervejaria Criolina, espaço muito, muito top!!! 5, 10, 15, 1.000 estrelas!
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="b-cm">
+                    <div class="container">
+                        <div class="cicle_box">
+                            <img class="app_thumb"
+                                 src="https://scontent.fopo1-1.fna.fbcdn.net/v/t1.0-1/p200x200/86932214_10156981861148977_1829651674344456192_n.jpg?_nc_cat=111&_nc_sid=dbb9e7&_nc_oc=AQllCPMetxfhHdselpl6KLKad8NZIZBNT2Ften0ECy3Z-bt_S58RI4x5925WeqKEpv0SMWeylv8uPUBICvhysFP_&_nc_ht=scontent.fopo1-1.fna&_nc_tp=6&oh=e5e473a81a1ec4510e0d74e2e86d2782&oe=5EBD2E56"
+                                 alt="Card image cap">
+                        </div>
+                        <a href="#"><h6>Talita Miotto</h6></a>
+                        <p>
+                            <i class="fas fa-quote-left"></i>
+                            Equipe maravilhosa, espaço lindo, cervejas e drinks delícias e comida divina! E tens shows
+                            fantásticos! Amo! ❤️
+
+                            Amazing team, space, beers, drinks and food! A great selections of gigs! I love there! ❤️
+                            Friendly bartenders · Live music · Craft beer · Great cocktails · Ótima comida
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="row">
+                    <div class="col-7">
+                        <img src="./static/img/criolina_logo.svg">
+                    </div>
+                    <div class="col-5">
+                        <div id="front" class="login-form front">
+                            <form method="POST" action="{{ url_for('login') }}">
+                                <div class="input-group">
+                                    <!--                              <label class="label-form">LOGIN</label>-->
+                                    <input type="email" class="input-form" name="EMAIL" autocomplete="off"
+                                           placeholder="LOGIN">
+                                </div>
+                                <div class="input-group">
+                                    <!--                              <label class="label-form">SENHA</label>-->
+                                    <input type="password" class="input-form" name="PASSWORD" autocomplete="off"
+                                           placeholder="SENHA">
+                                    <a href="#" class="register">esqueceu a senha?</a>
+                                </div>
+                                <div class="input-group text-center">
+                                    <input type="submit" class="button_4" value="ACESSAR">
+
+                                </div>
+                            </form>
+                            <button type="submit" id="btn_front" class="button_5">ou registre-se<strong
+                                    style="margin-left:2px;">AQUI</strong></button>
+
+                        </div>
+                        <div id="back" class="login-form back">
+                            <form class="blend" action="{{ url_for('register') }}" method="POST">
+                                <div class="input-group rec">
+                                    <input class="input-form" type="text" name="EMAIL" placeholder="EMAIL"
+                                           autocomplete="off">
+                                </div>
+                                <div class="input-group rec">
+                                    <input class="input-form" type="password" name="PASSWORD" placeholder="EMAIL"
+                                           autocomplete="off">
+                                </div>
+
+
+                                <div class="flex">
+                                    <div class="input-group rec">
+                                        <input type="text" class="input-form" name="NOME" autocomplete="off"
+                                               placeholder="NOME">
+                                    </div>
+                                    <div class="input-group rec">
+                                        <input type="text" class="input-form" name="SOBRENOME" autocomplete="off"
+                                               placeholder="SOBRENOME">
+                                    </div>
+                                </div>
+
+
+                                <div class="input-group text-center">
+                                    <input type="submit" class="button_4" value="REGISTRAR">
+                                </div>
+                            </form>
+                            <button type="submit" id="btn_back" class="button_5"><strong>já tenho login</strong>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    var btn = document.getElementById('btn_front');
+    var front = document.getElementById('front');
+    var back = document.getElementById('back');
+    var btn2 = document.getElementById('btn_back');
+
+
+btn.addEventListener( 'click', function() {
+front.classList.remove('not-flipped');
+  back.classList.remove('is-flipped');
+
+  front.classList.toggle('is-flipped');
+  back.classList.toggle('not-flipped');
+
+});
+
+btn2.addEventListener( 'click', function() {
+front.classList.remove('is-flipped');
+  back.classList.remove('not-flipped');
+
+  front.classList.toggle('not-flipped');
+  back.classList.toggle('is-flipped');
+
+});
+
+</script>
+
+
+{% include 'footer.html' %}
+
+
+

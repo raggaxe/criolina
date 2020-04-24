@@ -1,0 +1,830 @@
+
+
+{% include 'header.html' %}
+<style>
+  .header__nav{
+    min-height: 53px;
+     background:rgba(255,181,0,0.1);
+    width:100%;
+  }
+  .progress{
+  width:100px;
+  margin: 30px 30px 0 30px;
+
+  }
+
+
+
+
+.bg {
+    background-color: #368521!important;
+}
+      ul{
+      list-style-type: none;
+      }
+      .flex{
+      display:flex;
+    }
+
+.flex-item {
+    flex: 1 0 auto;
+    }
+
+
+
+
+
+
+
+
+
+a:hover{
+text-decoration:none;
+}
+.nav-tabs .nav-link{
+border:none;
+}
+.nav-tabs{
+border:none;
+font-size:12px;
+font-weight:400;
+margin:0 auto;
+}
+.nav-item{
+margin:0 auto;
+width:120px;
+}
+.nav-item i{
+font-size:37px;
+  margin-bottom:7px;
+  display:block;
+}
+
+.nav-link img{
+width:100%;
+max-height:100px;}
+
+.nav-link{
+color: #6c6c6c;
+margin-top:10px;}
+
+
+.nav-link:hover {
+color:#6c6c6c;
+background:rgba(255,181,0,0.6);
+}
+
+.nav-tabs .nav-link:hover {
+
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+color:#6c6c6c;;
+border-bottom: 4px solid #ff8000;
+
+}
+
+
+.tab-content{
+height:auto;
+margin:20px 0 20px 0;
+}
+
+
+.tab-pane{
+padding:30px;
+height:auto;
+background:rgba(255,181,0,0.15);
+margin:20px;
+
+}
+
+.tab-pane img{
+height:150px;
+}
+
+.active_promo{
+height:auto;
+margin:0 auto;
+box-shadow: 1px 2px 7px rgba(0,0,0,.1);
+background:#fff;
+padding:20px;
+margin-bottom:30px;
+}
+
+.active_promo h1{
+color:rgba(255,181,0,0.9);
+}
+
+.active_promo h6{
+color:rgba(0,0,0,0.55);
+padding:10px;
+}
+
+.active_promo p{
+margin-bottom:0;
+}
+
+
+.jsx{
+margin-top:20px;}
+
+
+
+.txt p{
+color: #6c6c6c;
+font-size:10px;
+font-weight:300;
+
+}
+
+.sub-text strong{
+color:rgba(255,181,0,0.9);
+font-weight:600;
+font-size:11px;
+}
+
+.abs-top-right{
+position:absolute;
+right:15px;
+top:0px;
+background:none;
+border:0;
+cursor:pointer;
+}
+
+.abs-top-delete{
+position:absolute;
+right:8px;
+margin-top:10px;
+background:none;
+border:0;
+cursor:pointer;
+transform: rotate(90deg);
+}
+
+.abs-top-delete i {
+color:rgba(255,181,0,0.9);
+}
+
+.abs-top-right i {
+color:rgba(255,181,0,0.9);
+}
+
+.pd{
+padding:10px;
+background:#fff;
+margin-bottom:8px;
+width:100%;}
+
+#circle,circle2
+{
+  width:50px;
+  height:50px;
+  border:3px solid black;
+  border-radius:100%;
+ background:url(../static/img/garrafa.svg) center no-repeat;
+ background-size: 40px 40px;
+}
+
+
+
+
+
+.bg_svg{
+width:100%;
+max-width:300px;
+height:auto;
+margin:50px auto;
+background:none;
+border:0;
+
+}
+.bg_svg img{
+margin:0 auto;
+transform:scale(2);
+
+}
+
+.set{
+margin-top:80px;
+}
+.box_beer{
+margin:10px auto;
+width:100%;
+padding:10px;
+}
+
+
+
+.bg_y{
+background:rgba(255,181,0,0.2);
+border:2px solid #ffeeba;
+border-radius:5px;
+padding:10px;
+color:#856404;
+margin-bottom:10px;
+cursor:pointer;
+}
+
+.bg_g{
+background:#d4edda;
+border:2px solid #c3e6cb;
+border-radius:5px;
+padding:10px;
+color:#856404;
+cursor:pointer;
+}
+
+.bg_c{
+color: #0c5460;
+    background-color: #d1ecf1;
+    border:2px solid  #bee5eb;
+    border-radius:5px;
+padding:10px;
+cursor:pointer;
+}
+
+
+.circle_box{
+width:80px;
+height:80px;
+border-radius:50%;
+
+display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    text-align: center;
+    white-space: nowrap;
+    margin-top:-27px;
+}
+
+.m10{
+margin-top:6px;}
+
+
+.for_nr{
+width:40px;
+heigth:50px;
+padding:8px;
+border-radius:50px;
+background:rgba(255,255,255,.7);}
+
+.corner{
+heigth:50px;
+display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    text-align: center;
+    white-space: nowrap;
+}
+
+#nav-configuracao{
+height:auto;
+}
+
+
+
+
+.ll{
+background:#fff;
+width:100%;
+height:180px;
+display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+
+
+.img_profile {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 2px solid rgba(255,181,0,1);
+    border-radius: 100%;
+    top:50%;
+
+
+
+}
+
+.img_profile img {
+    height: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.mudar_photo{
+position:absolute;
+z-index:999;
+text-align:center;
+display: inline-block;
+    vertical-align: middle;
+    min-width: 200px;
+    height: 200px;
+     border: 2px solid rgba(255,181,0,1);
+    border-radius: 100%;
+    background:transparent;
+    color:transparent;
+    margin-top:-2px;
+     transition: all .9s ease;
+     display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    text-align: center;
+}
+.mudar_photo:hover{
+   background:#fff3cd;
+  color:#856404;
+  margin-left:-2px;
+}
+
+
+
+.vex i {
+font-size:78px;
+margin-bottom:10px;}
+.vex p{
+font-size:13px;
+font-weight:300;}
+
+.dash{
+background:#fff;
+display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+
+    height:250px;
+     margin:0 auto;
+     padding: 0 0 0 50px;
+     }
+
+.mm{
+background:#fff;
+    width:100%;
+    padding-bottom:40px;
+    font-size:14px;
+
+}
+.mm label{
+color:rgba(255,181,0,.77);
+margin-top:4px;
+}
+
+.bg0{
+background:rgba(255,181,0,.14);
+}
+.bg1{
+background:rgba(255,181,0,.14);
+padding:5px;}
+
+ .mm span p{
+color:rgba(0,0,0,.5);
+margin:4px 0 0 0;
+ }
+
+     .brbott-6{
+font-size:23px;
+text-transform: uppercase;
+color:#ffc100;
+     }
+
+     .email_text{
+     font-style: italic; color:rgba(0,0,0,.5);
+     }
+
+     .ff{
+    }
+
+.perfil{
+max-width:600px;
+min-width:380px;
+margin:0 auto;}
+
+
+#save_all{
+margin:40px 0 0 0;
+}
+
+</style>
+
+
+<nav>
+    <ul class="nav nav-tabs text-center" id="nav-tab" role="tablist">
+        <li id="first_item" class="nav-item col-3 text-center">
+            <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+               aria-controls="nav-home" aria-selected="true">
+                <img src="../static/img/icon-1.svg">
+                <p>GERAL</p></a>
+        </li>
+        <li class="nav-item col-3">
+            <a class="nav-link" id="nav-pedidos-tab" data-toggle="tab" href="#nav-pedidos" role="tab"
+               aria-controls="nav-pedidos" aria-selected="false">
+                <img src="../static/img/icon-2.svg">
+                <p>PEDIDOS</p></a>
+        </li>
+        <li class="nav-item col-3">
+            <a class="nav-link" id="nav-opnioes-tab" data-toggle="tab" href="#nav-opnioes" role="tab"
+               aria-controls="nav-opnioes" aria-selected="false">
+                <img src="../static/img/icon-4.svg">
+                <p>MENSAGENS</p></a>
+        </li>
+        <li class="nav-item col-3">
+            <a class="nav-link" id="nav-configuracao-tab" data-toggle="tab" href="#nav-configuracao" role="tab"
+               aria-controls="nav-configuracao" aria-selected="false">
+                <img src="../static/img/icon-3.svg">
+                <p>PERFIL</p></a>
+        </li>
+
+    </ul>
+</nav>
+
+
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="active_promo">
+                    <button class="abs-top-right" id="direct_pontos" data-toggle="tooltip" data-placement="top"
+                            title="Veja todos seus pontos"><i class="fas fa-ellipsis-h"></i></button>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="../static/img/discount.svg">
+                        </div>
+                        <div class="col-7">
+                            <div class="jsx flex">
+                                <h1>{{pontos}}</h1>
+                                <h6>Pts.</h6>
+                            </div>
+                            <hr>
+                            <div class="container txt text-center">
+                                <p>Acumule pontos em compras pelo site</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="active_promo">
+                    <button class="abs-top-right" id="direct_pedidos" data-toggle="tooltip" data-placement="top"
+                            title="Acompanhe seus pedidos realizados"><i class="fas fa-ellipsis-h"></i></button>
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="../static/img/pedidos.svg">
+                        </div>
+                        <div class="col-6">
+                            <div class="jsx flex">
+                                {% if pop_pedidos == 1 %}
+                                <h1>{{pop_pedidos}}</h1>
+                                <h6>pedido</h6>
+                                {%else%}
+                                <h1>{{pop_pedidos}}</h1>
+                                <h6>pedidos</h6>
+                                {% endif %}
+                            </div>
+                            <hr>
+                            <div class="container txt text-center">
+                                <p>Acompanhe seus pedidos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="active_promo">
+                    <button class="abs-top-right" id="direct_msg" data-toggle="tooltip" data-placement="top"
+                            title="Todas as mensagens"><i class="fas fa-ellipsis-h"></i></button>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="../static/img/chat.svg">
+                        </div>
+                        <div class="col-7">
+                            <div class="jsx flex">
+                                <h1>0</h1>
+                                <h6>Mensagens</h6>
+                            </div>
+                            <hr>
+                            <div class="container txt text-center">
+                                <p>Envie mensagens para outros usuários</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="active_promo">
+                    <button class="abs-top-right" id="direct_perfil" data-toggle="tooltip" data-placement="top"
+                            title="Veja seu perfil completo"><i class="fas fa-ellipsis-h"></i></button>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="../static/img/resume.svg">
+                        </div>
+                        <div class="col-7">
+                            <div class="jsx text-center">
+                                <h1 style="font-size:18px;text-transform: uppercase;">{{session.Completo}}</h1>
+                            </div>
+                            <hr>
+                            <div class="container txt text-center">
+                                <p>Telefone:</p>
+                                {% if user.9 %}
+                                <p class="sub-text"><strong>{{user.9}}</strong></p>
+                                {% else %}
+                                <p class="sub-text">*** ainda não cadastrado</p>
+                                {% endif%}
+
+                            </div>
+                            <div class="container txt text-center">
+                                <p>Endereço:</p>
+                                {% if user.7 %}
+                                <p class="sub-text"><strong style="font-weight:600;">{{user.7}} , {{user.11}} -
+                                    {{user.12}}</strong></p>
+                                {% else %}
+                                <p class="sub-text">*** ainda não cadastrado</p>
+                                {% endif%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-pedidos" role="tabpanel" aria-labelledby="nav-pedidos-tab">
+        <div class="row">
+            <div class="col-md-5 text-center">
+                <div class="card bg_svg">
+                    <div class="container">
+                        <img src="../static/img/icon-2.svg">
+                    </div>
+                    <div class="set">
+                        <div class="box_beer">
+                            <div class="container text-center">
+                                <div class="bg_c">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="for_nr">
+                                                <strong>{{pop_pedidos}}</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-10 corner">
+                                            TOTAL DE PEDIDOS
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="bg_y">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="for_nr">
+                                                <strong>{{to_delivery}}</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-10 corner">
+                                            A ENTREGAR
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg_g">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="for_nr">
+                                                <strong>{{realizados}}</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-10 corner">
+                                            JÁ RECEBIDOS
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-7 col-xs-12">
+                <div class="container-fluid">
+                    <div class="text-center">
+                        <h4 style="color:#856404;;">PEDIDOS PARA ENTREGA</h4>
+                    </div>
+                    {% for pedidos in invoice %}
+                    {% if pedidos.5 == 'A ENTREGAR'%}
+                    <div class="container pd">
+                        <div class="row">
+                            <div class="col-2">
+                                <div id="circle" class="cicle_box_beer">
+                                </div>
+                            </div>
+                            <div class="col-3 m10 text-center">
+                                <h4 style=" margin:0; padding:0">{{pedidos.2}}</h4>
+                                <p style="color:#ffc100;font-size:9px; margin:0; padding:0">CERVEJA 1 LT.</p>
+                            </div>
+                            <div class="col-4 m10 text-center">
+                                <h6 style=" margin:0;margin-top:5px; padding:0;font-size:11px;">{{pedidos.7}}</h6>
+                                <p style="color:#ffc100;font-size:9px; margin:0; padding:0">ENTREGA</p>
+                            </div>
+                            <div class="col-2 m10 text-center">
+                                <button type="button" class="btn btn-warning" style="margin:3px -25px;font-size:9px;color: #856404;
+                                                            background-color: #fff3cd;border-color: #ffeeba;">
+                                    {{pedidos.5}}
+                                </button>
+                            </div>
+                            <a href="/delete_invoice/{{ pedidos.0 }}">
+                                <button class="abs-top-delete" data-toggle="tooltip" data-placement="top"
+                                        title="CANCELAR O PEDIDO">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <hr>
+                <div class="container-fluid ">
+                    <div class="text-center">
+                        <h4 style="color:#856404;;">PEDIDOS JÁ REALIZADOS</h4>
+                    </div>
+                    {% if realizados == 0 %}
+                    <div class="container ll">
+                        <p style="font-size:11px; letter-spacing:1px; font-weight:600;"> NÃO HÁ NENHUM PEDIDO
+                            ANTERIOR</p>
+                    </div>
+                    {% else %}
+                    {% for pedidos in invoice %}
+                    {% if pedidos.5 != 'A ENTREGAR'%}
+                    <div class="container pd">
+                        <div class="row">
+                            <div class="col-2">
+                                <div id="circle2" class="cicle_box_beer">
+                                </div>
+                            </div>
+                            <div class="col-3 m10 text-center">
+                                <h4 style=" margin:0; padding:0">{{pedidos.2}}</h4>
+                                <p style="color:#ffc100;font-size:9px; margin:0; padding:0">CERVEJA 1 LT.</p>
+                            </div>
+                            <div class="col-4 m10 text-center">
+                                <h4 style=" margin:0; padding:0">{{pedidos.7}}</h4>
+                                <p style="color:#ffc100;font-size:9px; margin:0; padding:0">DATA DE ENTREGA</p>
+                            </div>
+                            <div class="col-2 m10 text-center">
+                                <button type="button" class="btn btn-warning" style="margin:3px -25px;font-size:10px;color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;">
+                                    {{pedidos.5}}
+                                </button>
+                            </div>
+                            <button class="abs-top-delete" data-toggle="tooltip" data-placement="top"
+                                    title="CANCELAR O PEDIDO"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                    </div>
+                    {%endif%}
+                    {% endfor %}
+                    {%endif%}
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-opnioes" role="tabpanel" aria-labelledby="nav-opnioes-tab">...</div>
+    <div class="tab-pane fade" id="nav-configuracao" role="tabpanel" aria-labelledby="nav-configuracao-tab">
+        <div class="perfil">
+            <div class="dash text-left" id="insert_btn_photo">
+                <form method="POST" enctype="multipart/form-data">
+                    <div id="img_profile" class="img_profile">
+                        <a href="#" id="browse-click" class="mudar_photo" onclick="myFoto(this.id)">
+                            <div class="vex">
+                                <i class="fas fa-user-astronaut"></i>
+                                <p> MUDAR<br> FOTO</p>
+                            </div>
+                        </a>
+                        {% if user.13 %}
+                        {{user.13}}
+                        <img id="change_avatar_2" class="app_thumb">
+
+                        {% else%}
+                        <img id="change_avatar" class="app_thumb" src="/static/img/garrafa.svg">
+                        {% endif %}
+<!--                                         <input type="file" name="file" id="insert_foto_none" style="display:none;" onchange="previewImage_profile(event)">-->
+<!--                         <input type="file" id="insert_foto_none" accept="image/*" name="file" style="display:none;"  onchange="previewImage_profile(event)">-->
+<!--                                      <button id="browse-click" class="btn btn-input">ADICIONAR IMAGENS</button>-->
+<!--                                              <input type="file" id="gallery-photo-add" name="file[]" multiple="">-->
+                    </div>
+                    <form method=post enctype=multipart/form-data>
+                        <input id="insert_foto_none" type=file name=file style="display:none;"
+                               onchange="readURL(this);">
+                        <input type=submit style="display:none;" id="btn_submit_avatar"
+                               class="submit_btn"
+                               value='Gravar Foto'>
+                    </form>
+                    <div class="container-fluid">
+                        <div style="display:block; width:100%;margin:0 auto;" class="container-fluid text-center">
+                            <h4 class="brbott-6">{{user.1}} {{user.2}}</h4>
+                            <hr>
+                            <p class="email_text">{{user.3}}</p>
+                            <button id="edit_all" class="button_3">EDITAR DADOS</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+         <div class="container-fluid">
+                    <div class="ff row">
+                        <div class="col-md-12 text-center ">
+                            <label style="font-weight:300;color:rgba(255,181,0,.77);padding:10px;font-size:11px;">Usuário registrado desde:<strong style="margin-left:5px;font-weight:300;">{{user.10}}</strong></label>
+                        </div>
+
+                    </div>
+                </div>
+            <div class="mm">
+                <div class="container-fluid">
+                    <div class="ff row">
+                        <div class="col-md-4 text-right bg0">
+                            <label>ENDEREÇO:</label>
+                        </div>
+                        <div class="col-md-8 text-left">
+                            <span><p>{{user.7}}</p></span>
+                        </div>
+                    </div>
+                    <div class="ff row">
+                        <div class="col-md-4 text-right bg0">
+                            <label>Nr/APTO:</label>
+                        </div>
+                        <div class="col-md-8 text-left">
+                            <span><p>{{user.11}}</p></span>
+                        </div>
+                    </div>
+                    <div class="ff row">
+                        <div class="col-md-4 text-right bg0">
+                            <label>BAIRRO:</label>
+                        </div>
+                        <div class="col-md-8 text-left">
+                            <span><p>{{user.12}}</p></span>
+                        </div>
+                    </div>
+                    <div class="ff row">
+                        <div class="col-md-4 text-right bg0">
+                            <label>CEP:</label>
+                        </div>
+                        <div class="col-md-8 text-left">
+                            <span><p>{{user.8}}</p></span>
+                        </div>
+                    </div>
+                    <div class="ff row">
+                        <div class="col-md-4 text-right bg0">
+                            <label>TELEFONE:</label>
+                        </div>
+                        <div class="col-md-8 text-left">
+                            <span><p>{{user.9}}</p></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container-fluid text-center">
+                    <button id="save_all" class="button_3">SALVAR ALTERAÇÕES</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function myFoto(this_id) {
+    var x = document.getElementById('insert_foto_none');
+    x.click();
+
+}
+</script>
+{% include 'footer.html' %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
