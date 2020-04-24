@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daf3ade0-9bce-42dc-957c-39184b92ba2e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/servidor.py" beforeDir="false" afterPath="$PROJECT_DIR$/servidor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,34 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="servidor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="criolina" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/servidor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.servidor" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -46,5 +75,27 @@
       <updated>1587751479158</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="175" y="85" width="1071" height="696" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587752320669">
+      <screen x="0" y="23" width="1440" height="846" />
+    </state>
+    <state x="175" y="85" width="1071" height="696" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.846@0.23.1440.846" timestamp="1587752320669" />
+    <state width="1419" height="171" key="GridCell.Tab.0.bottom" timestamp="1587752549498">
+      <screen x="0" y="23" width="1440" height="846" />
+    </state>
+    <state width="1419" height="171" key="GridCell.Tab.0.bottom/0.23.1440.846@0.23.1440.846" timestamp="1587752549498" />
+    <state width="1419" height="171" key="GridCell.Tab.0.center" timestamp="1587752549497">
+      <screen x="0" y="23" width="1440" height="846" />
+    </state>
+    <state width="1419" height="171" key="GridCell.Tab.0.center/0.23.1440.846@0.23.1440.846" timestamp="1587752549497" />
+    <state width="1419" height="171" key="GridCell.Tab.0.left" timestamp="1587752549497">
+      <screen x="0" y="23" width="1440" height="846" />
+    </state>
+    <state width="1419" height="171" key="GridCell.Tab.0.left/0.23.1440.846@0.23.1440.846" timestamp="1587752549497" />
+    <state width="1419" height="171" key="GridCell.Tab.0.right" timestamp="1587752549498">
+      <screen x="0" y="23" width="1440" height="846" />
+    </state>
+    <state width="1419" height="171" key="GridCell.Tab.0.right/0.23.1440.846@0.23.1440.846" timestamp="1587752549498" />
   </component>
 </project>

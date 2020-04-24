@@ -2,7 +2,7 @@ from dbconnect import connection
 import requests
 from bs4 import BeautifulSoup
 import warnings
-import cssutils
+
 
 def InsertSql(myDict,table):
     try:
@@ -95,12 +95,7 @@ def eventos():
 
 from selenium import webdriver
 from bs4 import BeautifulSoup as bs
-import time
-import re
-from urllib.request import urlopen
 import json
-from pandas.io.json import json_normalize
-import pandas as pd, numpy as np
 
 def instagram_fotos():
     username = 'cervejariacriolina'
